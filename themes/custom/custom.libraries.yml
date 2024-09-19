@@ -1,0 +1,15 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: {}
+      https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css: {}
+      css/bootstrap.min.css: {}
+      css/style.css: {}
+  js:
+    https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js: {}
+    js/slick-slider.js: {}
+    js/main.js: {}
+  dependencies:
+    - core/jquery
+
