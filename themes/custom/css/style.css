@@ -340,6 +340,14 @@ body {
   color: #888383 !important;
 }
 
+.bg-light {
+    background-color: #ffffff !important;
+   }
+   
+.text-center {
+    text-align: left !important;
+}
+
 
 
 /*** Testimonial ***/
