@@ -21,42 +21,101 @@ body {
     z-index: 99;
 }
 
-
-
-/*** Spinner ***/
-#spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+ /* tabs  */
+.form--inline {
+    width: 100%; 
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column; 
 }
 
-#spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
-}
-
+/* Wrapper for the tabs */
 .tabs-wrapper {
     display: flex;
-    gap: 10px;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid #ddd; 
+    width: 100%; 
+    margin-bottom: 20px; 
 }
+
 
 .filter-tab {
-    padding: 10px 15px;
-    background-color: #eee;
-    text-decoration: none;
-    border-radius: 4px;
-    color: #333;
+    flex: 1; 
+    text-align: center; 
+    padding: 10px 0;
+    font-size: 16px; 
+    font-weight: bold;
+    color: #4c9bed;
     cursor: pointer;
-    border: 1px solid #ccc;
+    position: relative;  
+    text-decoration: none;
+    transition: color 0.3s ease; 
 }
 
+
 .filter-tab.active {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
+    color: #07090b; 
 }
+
+
+.filter-tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -13px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #007bff; 
+}
+
+
+@media (max-width: 768px) {
+    .filter-tab {
+        padding: 8px 0; 
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tabs-wrapper {
+        flex-direction: column; 
+    }
+
+    .filter-tab {
+        width: 100%; 
+        padding: 10px 0;
+        font-size: 16px; 
+    }
+}
+
+
+.filter-tab:hover {
+    color: #007bff; 
+}
+
+
+.select-wrapper {
+    width: 100% !important; 
+}
+
+
+.form-select {
+    width: 100%; 
+}
+
+
+.tabs-wrapper .filter-tab:first-child {
+    display: none;
+}
+
+#edit-submit-conferences {
+    display: none;
+}
+
 
 
 /*** Button ***/
@@ -294,6 +353,14 @@ body {
     transition: .5s;
 }
 
+.bg-light {
+ background-color: #ffffff !important;
+}
+
+.text-center {
+    text-align: left !important;
+}
+
 .team-item:hover img {
     top: -30px;
 }
@@ -338,14 +405,6 @@ body {
 .slick-prev:before,
 .slick-next:before {
   color: #888383 !important;
-}
-
-.bg-light {
-    background-color: #ffffff !important;
-   }
-   
-.text-center {
-    text-align: left !important;
 }
 
 
